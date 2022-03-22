@@ -41,7 +41,7 @@ export default class HelloWorldSceneAR extends Component {
         }
 
         ViroARTrackingTargets.createTargets({
-            gridImage: {
+            parkImage: {
                 source: require('./res/360_park.jpg'),
                 orientation: 'up',
                 physicalWidth: 0.1
@@ -54,7 +54,7 @@ export default class HelloWorldSceneAR extends Component {
                           style={styles.helloWorldTextStyle}/>
                 <ViroBox position={[0, -.5, -1]} scale={[.3, .3, .1]} materials={["grid"]}
                          animation={{name: "rotate", run: true, loop: true}}/>
-                <ViroARImageMarker target="gridImage" onAnchorFound={anchorFound}>
+                <ViroARImageMarker target="parkImage" onAnchorFound={anchorFound}>
                     <ViroAmbientLight color={"#aaaaaa"}/>
                     <ViroSpotLight innerAngle={5} outerAngle={90} direction={[0, -1, -.2]}
                                    position={[0, 3, 1]} color="#ffffff" castsShadow={true}/>
